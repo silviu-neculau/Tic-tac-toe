@@ -6,13 +6,13 @@ const[player,setPlayer]=useState<number>(0);
 
 const changePlayer = (player:number) =>{
   if(player === 0)
-    
+  setPlayer(1);  
 }
 
   return (
     <div className="App">
      <div className="gameBoard"> 
-      <button className="cell">1</button>
+      <div className="cell">1</div>
       <div className="cell">2</div>
       <div className="cell">3</div>
       <div className="cell">4</div>
