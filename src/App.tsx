@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { ChangeEventHandler, useState } from 'react';
 import './App.css';
 
 function App() {
+const[player,setPlayer]=useState<number>(0);
+
+const changePlayer = (player:number) =>{
+  if(player === 0)
+    
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="gameBoard"> 
+      <button className="cell">1</button>
+      <div className="cell">2</div>
+      <div className="cell">3</div>
+      <div className="cell">4</div>
+      <div className="cell">5</div>
+      <div className="cell">6</div>
+      <div className="cell">7</div>
+      <div className="cell">8</div>
+      <div className="cell">9</div>
+     </div>
     </div>
   );
 }
