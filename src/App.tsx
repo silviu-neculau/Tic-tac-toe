@@ -2,25 +2,39 @@ import React, { ChangeEventHandler, useState } from 'react';
 import './App.css';
 
 function App() {
-const[player,setPlayer]=useState<number>(0);
-
-const changePlayer = (player:number) =>{
-  if(player === 0)
-  setPlayer(1);  
+  interface player{
+    playerOne:number,
+    playerTwo:number,
+    playerUnasigned:number
+  }
+  const[player,setPlayer]=useState<number>(0);
+  
+  const board=[player,player,player,
+    player,player,player,
+    player,player,player];  
+    
+const changePlayer=(player:number)=>{
+  if (player === 0)
+  setPlayer(1);
+  console.log("apasat");
 }
+
+
+
 
   return (
     <div className="App">
      <div className="gameBoard"> 
-      <div className="cell">1</div>
-      <div className="cell">2</div>
-      <div className="cell">3</div>
-      <div className="cell">4</div>
-      <div className="cell">5</div>
-      <div className="cell">6</div>
-      <div className="cell">7</div>
-      <div className="cell">8</div>
-      <div className="cell">9</div>
+      <button className="cell" onClick={()=>changePlayer(player)}>1</button>
+      <button className="cell" onClick={()=>changePlayer(player)}>2</button>
+      <button className="cell" onClick={()=>changePlayer(player)}>3</button>
+      <button className="cell" onClick={()=>changePlayer(player)}>4</button>
+      <button className="cell" onClick={()=>changePlayer(player)}>5</button>
+      <button className="cell" onClick={()=>changePlayer(player)}>6</button>
+      <button className="cell" onClick={()=>changePlayer(player)}>7</button>
+      <button className="cell" onClick={()=>changePlayer(player)}>8</button>
+      <button className="cell" onClick={()=>changePlayer(player)}>9</button>
+
      </div>
     </div>
   );
