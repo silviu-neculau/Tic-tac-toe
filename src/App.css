@@ -12,3 +12,7 @@
   background-color: grey;
   border: solid 2px black;  
 }
+
+.cell:hover{
+  color: white;
+}
